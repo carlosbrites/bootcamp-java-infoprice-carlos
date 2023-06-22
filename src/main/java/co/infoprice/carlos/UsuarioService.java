@@ -17,6 +17,8 @@ public class UsuarioService {
     }
 
     public Usuario save (UsuarioDTO usuarioDTO) {
+        repository.findByGithubUser(usuarioDTO.getGithubUser());
+
         Usuario usuario = new Usuario();
         usuario.setName(usuarioDTO.getName());
         usuario.setOccupation(usuarioDTO.getOccupation());
@@ -25,7 +27,6 @@ public class UsuarioService {
     }
 
     public Usuario atualizarUsuario(Long userId, Usuario userDetails){
-
         Usuario usuario = repository.getReferenceById(userId);
 
         usuario.setName(userDetails.getName());
