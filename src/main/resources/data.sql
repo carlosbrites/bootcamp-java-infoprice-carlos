@@ -1,0 +1,1 @@
+INSERT INTO usuario (id, name, occupation, githubUser) values (1, 'Carlos', 'Empresario', 'carlos-surfista23');
