@@ -27,4 +27,9 @@ public class UsuarioController {
                                     @RequestBody Usuario userDetails){
         return service.atualizarUsuario(userId, userDetails);
     };
+
+    @DeleteMapping("/{id}")
+    public void removeUsuario(@PathVariable(value = "id") Long userId){
+        service.removeUsuario(userId);
+    }
 }
